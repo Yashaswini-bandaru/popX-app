@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 import InputField from "../components/InputField";
 import Button from "../components/Button";
 import "../styles/signup.css";
 
 function Signup() {
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
-  const [user, setUser] = useState({
+  const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
     email: "",
@@ -17,18 +19,22 @@ function Signup() {
   });
 
   const handleChange = (field, value) => {
-    setUser({ ...user, [field]: value });
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
   };
 
   const createAccount = () => {
-    const { fullName, phone, email, password } = user;
+    const { fullName, phone, email, password } = formData;
 
     if (!fullName || !phone || !email || !password) {
       alert("Please fill all required fields.");
       return;
     }
 
-    localStorage.setItem("user", JSON.stringify(user));
+    setUser(formData);
+
     navigate("/login");
   };
 
@@ -48,7 +54,7 @@ function Signup() {
             </>
           }
           placeholder="Marry Doe"
-          value={user.fullName}
+          value={formData.fullName}
           onChange={(e) => handleChange("fullName", e.target.value)}
         />
 
@@ -59,7 +65,7 @@ function Signup() {
             </>
           }
           placeholder="9876543210"
-          value={user.phone}
+          value={formData.phone}
           onChange={(e) => handleChange("phone", e.target.value)}
         />
 
@@ -70,7 +76,7 @@ function Signup() {
             </>
           }
           placeholder="marry@example.com"
-          value={user.email}
+          value={formData.email}
           onChange={(e) => handleChange("email", e.target.value)}
         />
 
@@ -82,14 +88,14 @@ function Signup() {
           }
           type="password"
           placeholder="Enter password"
-          value={user.password}
+          value={formData.password}
           onChange={(e) => handleChange("password", e.target.value)}
         />
 
         <InputField
           label="Company Name"
           placeholder="PopX"
-          value={user.company}
+          value={formData.company}
           onChange={(e) => handleChange("company", e.target.value)}
         />
 
@@ -102,7 +108,7 @@ function Signup() {
             <label>
               <input
                 type="radio"
-                checked={user.agency === "Yes"}
+                checked={formData.agency === "Yes"}
                 onChange={() => handleChange("agency", "Yes")}
               />
               Yes
@@ -111,7 +117,7 @@ function Signup() {
             <label>
               <input
                 type="radio"
-                checked={user.agency === "No"}
+                checked={formData.agency === "No"}
                 onChange={() => handleChange("agency", "No")}
               />
               No
