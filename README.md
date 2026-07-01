@@ -1,69 +1,102 @@
 # PopX UI Clone
 
-A responsive React.js application that recreates the PopX mobile user interface. This project demonstrates modern React development using reusable components, React Router, and Local Storage.
+A responsive React.js application that recreates the PopX mobile user interface. This project is built using React.js and demonstrates component-based architecture, React Router, Context API, and responsive UI development.
 
-## 📱 Screens
+## 🚀 Live Demo
+
+**Vercel:** https://your-vercel-app.vercel.app
+
+> Replace the above link with your deployed Vercel URL.
+
+---
+
+## ✨ Features
 
 - Welcome Screen
 - Login Screen
 - Signup Screen
 - Account Settings Screen
+- Responsive Mobile UI
+- React Router Navigation
+- React Context API for State Management
+- Reusable Components
+- Form Validation
+- Modern UI matching the provided design
 
-## 🚀 Live Demo
-
-**Vercel:** https://YOUR-VERCEL-LINK.vercel.app
-
-## 📸 Screenshots
-
-| Welcome | Login |
-|---------|-------|
-| ![](screenshots/welcome.png) | ![](screenshots/login.png) |
-
-| Signup | Account |
-|---------|----------|
-| ![](screenshots/signup.png) | ![](screenshots/account.png) |
-
-> *(You can add screenshots later by creating a `screenshots` folder.)*
+---
 
 ## 🛠️ Tech Stack
 
 - React.js
 - Vite
 - React Router DOM
-- CSS3
+- React Context API
 - React Icons
-- Local Storage
+- CSS3
 
-## ✨ Features
+---
 
-- Responsive mobile UI
-- Pixel-inspired PopX design
-- React Router navigation
-- Reusable Button component
-- Reusable Input component
-- Floating labels
-- Form validation
-- Local Storage for user information
-- Account page displaying stored user details
+## 📂 Folder Structure
 
-## 📂 Project Structure
-
-```
+```text
 popx-app/
 │
 ├── public/
+│
 ├── src/
 │   ├── assets/
+│   │   └── avatar.jpg
+│   │
 │   ├── components/
+│   │   ├── Button.jsx
+│   │   └── InputField.jsx
+│   │
+│   ├── context/
+│   │   └── UserContext.jsx
+│   │
 │   ├── pages/
+│   │   ├── Welcome.jsx
+│   │   ├── Signup.jsx
+│   │   ├── Login.jsx
+│   │   └── Account.jsx
+│   │
 │   ├── styles/
+│   │   ├── global.css
+│   │   ├── welcome.css
+│   │   ├── signup.css
+│   │   ├── login.css
+│   │   └── account.css
+│   │
 │   ├── App.jsx
 │   └── main.jsx
 │
 ├── package.json
 ├── vite.config.js
-└── README.md
+├── README.md
+└── vercel.json
 ```
+
+---
+
+## 📱 Application Flow
+
+```text
+Welcome
+   │
+   ▼
+Create Account
+   │
+   ▼
+Signup
+   │
+   ▼
+Login
+   │
+   ▼
+Account Settings
+```
+
+---
 
 ## ⚙️ Installation
 
@@ -91,18 +124,42 @@ Run the development server
 npm run dev
 ```
 
-Build the project
+Build for production
 
 ```bash
 npm run build
 ```
 
+---
+
+## 📸 UI Screens
+
+- Welcome Screen
+- Login Screen
+- Signup Screen
+- Account Settings Screen
+
+---
+
+## 🎯 Learning Outcomes
+
+- React Functional Components
+- React Hooks (`useState`, `useContext`)
+- React Context API
+- React Router DOM
+- Component Reusability
+- Form Handling
+- Responsive Design
+- State Management without localStorage
+
+---
+
 ## 👩‍💻 Author
 
 **Yashaswini Bandaru**
 
-GitHub: https://github.com/Yashaswini-bandaru
+- GitHub: https://github.com/Yashaswini-bandaru
 
 ---
 
-⭐ If you like this project, consider giving it a star!
+⭐ If you found this project useful, consider giving it a star!
