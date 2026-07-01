@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:#ececec;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding: 2rem;
+}
+
+.mobile{
+    width:375px;
+    height:812px;
+    background:#f7f8f9;
+    overflow:hidden;
+    border-radius:14px;
+    box-shadow:0 8px 30px rgba(0,0,0,.15);
+}
+
+button{
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    opacity:.95;
+}
+
+.primaryBtn{
+    width:100%;
+    height:46px;
+    background:#6C25FF;
+    border:none;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    border-radius:8px;
+}
+
+.secondaryBtn{
+    width:100%;
+    height:46px;
+    background:#ceb7ff;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    margin-top:14px;
+}
+
+.inputBox{
+    position:relative;
+    margin-bottom:22px;
+}
+
+.inputBox label{
+    position:absolute;
+    top:-9px;
+    left:14px;
+    background:#f7f8f9;
+    color:#6C25FF;
+    font-size:13px;
+    padding:0 5px;
+    font-weight:600;
+}
+
+.inputBox input{
+    width:100%;
+    height:48px;
+    border:1px solid #d4d4d4;
+    border-radius:7px;
+    padding:0 15px;
+    font-size:15px;
+    background:white;
+    outline:none;
+}
+
+.inputBox input:focus{
+    border-color:#6C25FF;
+}
+
+.required {
+    color: #ff3b30;
+    font-weight: 700;
+}

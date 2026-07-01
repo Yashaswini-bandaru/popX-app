@@ -1,0 +1,29 @@
+.welcomePage {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 28px;
+    background: #f7f8f9;
+}
+
+.welcomeContent {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.welcomeContent h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1d2226;
+}
+
+.welcomeContent p {
+    color: #7b7b7b;
+    font-size: 17px;
+    margin: 5px 0 20px;
+    line-height: 25px;
+}
+
+.welcomeContent .secondaryBtn {
+    margin-top: 14px;
+}

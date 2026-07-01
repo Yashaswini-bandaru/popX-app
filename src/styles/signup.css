@@ -1,0 +1,57 @@
+.signupPage {
+    background: #f7f8f9;
+    height: 100%;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signupPage h1 {
+    font-size: 32px;
+    color: #1d2226;
+    margin-bottom: 35px;
+    line-height: 42px;
+}
+
+.agencySection {
+    margin-top: 8px;
+}
+
+.agencySection p {
+    font-size: 15px;
+    color: #1d2226;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.agencySection span {
+    color: red;
+}
+
+.radioGroup {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.radioGroup label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #1d2226;
+}
+
+.radioGroup input[type="radio"] {
+    accent-color: #6C25FF;
+    width: 18px;
+    height: 18px;
+}
+
+.signupButton {
+    margin-top: auto;
+}
+
+.signupButton .primaryBtn {
+    width: 100%;
+}
